@@ -1,0 +1,24 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "632a71b8fa1dee04255024e0ef26b089"
+name = "RipeMetrics-Chatbot"
+handle = "ripemetrics-chatbot"
+application_url = "https://they-league-occurring-choices.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "ripe-andrews-dev.myshopify.com"
+
+[auth]
+redirect_urls = [
+  "https://they-league-occurring-choices.trycloudflare.com/auth/callback",
+  "https://they-league-occurring-choices.trycloudflare.com/auth/shopify/callback",
+  "https://they-league-occurring-choices.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-07"
+
+[pos]
+embedded = false
