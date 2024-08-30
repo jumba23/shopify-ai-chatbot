@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import type { ActionFunctionArgs, LoaderFunctionArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useFetcher } from "@remix-run/react";
@@ -13,6 +13,9 @@ import {
   List,
   Link,
   InlineStack,
+  TextField,
+  Form,
+  Modal,
 } from "@shopify/polaris";
 import { TitleBar, useAppBridge } from "@shopify/app-bridge-react";
 import { authenticate } from "../shopify.server";
@@ -93,6 +96,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 };
 
 export default function Index() {
+  const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
   const fetcher = useFetcher<typeof action>();
 
   const shopify = useAppBridge();
@@ -109,17 +113,21 @@ export default function Index() {
       shopify.toast.show("Product created");
     }
   }, [productId, shopify]);
-  const generateProduct = () => fetcher.submit({}, { method: "POST" });
-  console.log("fetcher", shopify);
+  // const generateProduct = () => fetcher.submit({}, { method: "POST" });
+
+  const handleSignUpClick = () => {
+    setIsSignUpModalOpen(true);
+  };
+  // console.log("fetcher", shopify);
   //fetch shopify user
   // shopify.user().then((user) => {
   //   console.log("user", user);
   // });
   return (
     <Page>
-      <TitleBar title="Remix app template">
-        <button variant="primary" onClick={generateProduct}>
-          Generate a product
+      <TitleBar title="RipeMetrics AI Chatbot">
+        <button variant="primary" onClick={handleSignUpClick}>
+          Sign Up
         </button>
       </TitleBar>
       <BlockStack gap="500">
@@ -173,9 +181,10 @@ export default function Index() {
                     mutation in our API references.
                   </Text>
                 </BlockStack>
+
                 <InlineStack gap="300">
-                  <Button loading={isLoading} onClick={generateProduct}>
-                    Generate a product
+                  <Button loading={isLoading} onClick={handleSignUpClick}>
+                    Sign Up
                   </Button>
                   {fetcher.data?.product && (
                     <Button
@@ -334,6 +343,26 @@ export default function Index() {
           </Layout.Section>
         </Layout>
       </BlockStack>
+      <Modal
+        open={isSignUpModalOpen}
+        onClose={() => setIsSignUpModalOpen(false)}
+        title="RipeMetrics AI Chatbot"
+      >
+        <Modal.Section>
+          <Form
+            onSubmit={() => {
+              // Handle form submission here
+              setIsSignUpModalOpen(false);
+            }}
+          >
+            <BlockStack gap="400">
+              <TextField label="Username" autoComplete="off" type="text" />
+              <TextField label="Password" autoComplete="off" type="password" />
+              <Button>Sign Up</Button>
+            </BlockStack>
+          </Form>
+        </Modal.Section>
+      </Modal>
     </Page>
   );
 }
