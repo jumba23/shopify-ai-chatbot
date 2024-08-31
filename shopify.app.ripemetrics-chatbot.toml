@@ -3,7 +3,7 @@
 client_id = "632a71b8fa1dee04255024e0ef26b089"
 name = "RipeMetrics-Chatbot"
 handle = "ripemetrics-chatbot"
-application_url = "https://first-woods-yu-performing.trycloudflare.com"
+application_url = "https://existence-see-wind-methods.trycloudflare.com"
 embedded = true
 
 [build]
@@ -12,9 +12,9 @@ dev_store_url = "ripe-andrews-dev.myshopify.com"
 
 [auth]
 redirect_urls = [
-  "https://first-woods-yu-performing.trycloudflare.com/auth/callback",
-  "https://first-woods-yu-performing.trycloudflare.com/auth/shopify/callback",
-  "https://first-woods-yu-performing.trycloudflare.com/api/auth/callback"
+  "https://existence-see-wind-methods.trycloudflare.com/auth/callback",
+  "https://existence-see-wind-methods.trycloudflare.com/auth/shopify/callback",
+  "https://existence-see-wind-methods.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
