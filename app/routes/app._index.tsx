@@ -119,7 +119,7 @@ export default function Index() {
     setIsSignUpModalOpen(true);
   };
   // console.log("fetcher", shopify);
-  //fetch shopify user
+  // // fetch shopify user
   // shopify.user().then((user) => {
   //   console.log("user", user);
   // });
