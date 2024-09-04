@@ -28,7 +28,7 @@ export default function AboutPage() {
                 enhance customer satisfaction and streamline operations
                 effortlessly. To learn more about RipeMetrics AI Chatbot, visit{" "}
                 <Link
-                  url="https://www.ripemetrics.com"
+                  url="https://app.ripemetrics.com/authentication/register"
                   target="_blank"
                   // removeUnderline
                 >

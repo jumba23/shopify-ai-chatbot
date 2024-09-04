@@ -3,7 +3,7 @@
 client_id = "70bb18e886844dd98f18586b1475d371"
 name = "RipeMetrics"
 handle = "ripemetrics-2"
-application_url = "https://eddie-ones-infringement-recover.trycloudflare.com"
+application_url = "https://ski-informative-nylon-registry.trycloudflare.com"
 embedded = true
 
 [build]
@@ -16,9 +16,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://eddie-ones-infringement-recover.trycloudflare.com/auth/callback",
-  "https://eddie-ones-infringement-recover.trycloudflare.com/auth/shopify/callback",
-  "https://eddie-ones-infringement-recover.trycloudflare.com/api/auth/callback"
+  "https://ski-informative-nylon-registry.trycloudflare.com/auth/callback",
+  "https://ski-informative-nylon-registry.trycloudflare.com/auth/shopify/callback",
+  "https://ski-informative-nylon-registry.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
